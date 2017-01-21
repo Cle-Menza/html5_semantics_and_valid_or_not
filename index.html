@@ -4,31 +4,188 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,500,700&amp;subset=cyrillic" rel="stylesheet">
   <title>Document</title>
 </head>
-<body class="main_page">
+<body class="main_page"> <!--  -->
   
-  <header class="top_page">
+  <header class="top_nav_page"> <!-- Топ линия всей шапки страницы -->
     
-    <nav class="content_container">
+    <nav class="content_container clearfix"> <!-- Контейнер для выравнивания. Фикс из-за флоатов -->
       
-      <ul class="main_menu">
-        <li class="menu_item"><a class="menu_link" href=""></a></li>
-        <li class="menu_item"><a class="menu_link" href=""></a></li>
-        <li class="menu_item"><a class="menu_link" href=""></a></li>
-        <li class="menu_item"><a class="menu_link" href=""></a></li>
-        <li class="menu_item"><a class="menu_link" href=""></a></li>
-        <li class="menu_item"><a class="menu_link" href=""></a></li>
+      <ul class="main_menu"> <!-- ul сам по себе блочный элемент -->
+        <li class="menu_item"><a class="menu_link" href="">Menu</a></li>
+        <li class="menu_item"><a class="menu_link" href="">Menu Link</a></li>
+        <li class="menu_item"><a class="menu_link" href="">Menu Link</a></li>
+        <li class="menu_item"><a class="menu_link" href="">Menu Link Link</a></li>
+        <li class="menu_item"><a class="menu_link" href="">Menu Link</a></li>
+        <li class="menu_item"><a class="menu_link" href="">Menu Link</a></li>
       </ul>
 
-      <form class="main_search" action="">
-        <input class="search_field" type="search">
-        <button class="search_btn"></button>
+      <form class="main_search" action=""> <!-- form блочный элемент -->
+        <input class="search_field" type="search" name="search" placeholder="search" autofocus>
+        <button class="search_btn">Search</button>
       </form>
 
     </nav>
 
-  </header>  
+  </header>
+
+  <main class="content_container clearfix"> <!-- Весь содержательный и главный контент страницы -->
+    
+    <section class="main_content"> <!-- Секция блоков и материалов -->
+      
+      <header class="content_title"> <!-- Заголовок страницы -->
+        <h1 class="content_title_main_title">
+        Main content title
+        </h1>
+        <figure class="content_title_best_posts"> <!-- Групировка картинок -->
+          <a href="" class="best_post_link"><img width="100" height="65" src="sample.png" 
+          alt="Sample Img"></a>
+          <a href="" class="best_post_link"><img width="100" height="65" src="sample.png" 
+          alt="Sample Img"></a>
+          <a href="" class="best_post_link"><img width="100" height="65" src="sample.png" 
+          alt="Sample Img"></a>
+          <a href="" class="best_post_link"><img width="100" height="65" src="sample.png" 
+          alt="Sample Img"></a>
+          <a href="" class="best_post_link"><img width="100" height="65" src="sample.png" 
+          alt="Sample Img"></a>
+          <figcaption class="best_post_caption"> <!-- Подпись к групе картинок -->
+            Best posts in the rubric
+          </figcaption>
+        </figure>
+      </header>
+
+      <article class="content_block"> <!-- Отдельный пост -->
+          
+        <header class="content_block_title"> <!-- Заголовок поста -->
+          <h3 class="block_title">Block Title 1</h3>
+          <time pubdate datetime="2017-20-01">20 januar 2017 year</time>
+        </header>
+
+        <section class="content_block_inside">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat tenetur sunt velit, ab ut nemo eum similique, veniam fugit aperiam assumenda reprehenderit, rerum unde asperiores? Sunt voluptates natus dolore illum perspiciatis maiores, minima iste, animi, asperiores autem obcaecati optio quasi ea et rem doloribus quaerat pariatur. Aut, quaerat neque nam.
+          </p>
+          <table class="content_block_table">
+            <tr>
+              <th></th>
+              <th>Lorem2</th>
+              <th>Lorem3</th>
+              <th>Lorem4</th>
+            </tr>
+            <tr>
+              <td>Math</td>
+              <td>458.2</td>
+              <td>854.2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>Cheked</td>
+              <td>Bad</td>
+              <td>Warning</td>
+              <td>Good</td>
+            </tr>
+          </table>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente explicabo sed dolore eum provident, mollitia.
+          </p>
+        </section>
+        
+        <footer class="content_block_bottom clearfix">
+          
+          <ul class="block_bottom_items">
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+          </ul>
+          <b class="block_bottom_author">Author: John Doe</b>
+          <time pubdate datetime="2017-20-01">20 januar 2017 year</time>
+
+        </footer>
+
+      </article>
+
+      <article class="content_block"> <!-- Отдельный пост -->
+          
+        <header class="content_block_title"> <!-- Заголовок поста -->
+          <h3 class="block_title">Block Title 2</h3>
+          <time pubdate datetime="2017-22-01">22 januar 2017 year</time>
+        </header>
+
+        <section class="content_block_inside">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat tenetur sunt velit, ab ut nemo eum similique, veniam fugit aperiam assumenda reprehenderit, rerum unde asperiores?
+          </p>
+          <img width="100%" src="sample.png" alt="sample img">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure unde ipsa vel similique sint ratione placeat iste impedit fugiat quasi laborum dolor magni, quae neque doloribus iusto nostrum reiciendis magnam cupiditate atque, eligendi, provident consequatur eaque deleniti. Consequuntur odit accusamus rerum, molestias perferendis sint labore deserunt facilis eum obcaecati. At velit saepe quaerat quibusdam atque. Dolores veritatis officiis, culpa similique!
+          </p>
+        </section>
+        
+        <footer class="content_block_bottom clearfix">
+          
+          <ul class="block_bottom_items">
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+          </ul>
+          <b class="block_bottom_author">Author: John Doe</b>
+          <time pubdate datetime="2017-22-01">22 januar 2017 year</time>
+
+        </footer>
+
+      </article>
+
+      <article class="content_block"> <!-- Отдельный пост -->
+          
+        <header class="content_block_title"> <!-- Заголовок поста -->
+          <h3 class="block_title">Block Title 3</h3>
+          <time pubdate datetime="2017-24-01">24 januar 2017 year</time>
+        </header>
+
+        <section class="content_block_inside">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat tenetur sunt velit, ab ut nemo eum similique, veniam fugit aperiam assumenda reprehenderit, rerum unde asperiores?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure unde ipsa vel similique sint ratione placeat iste impedit fugiat quasi laborum dolor magni, quae neque doloribus iusto nostrum reiciendis magnam cupiditate atque, eligendi, provident consequatur eaque deleniti. Consequuntur odit accusamus rerum, molestias perferendis sint labore deserunt facilis eum obcaecati. At velit saepe quaerat quibusdam atque. Dolores veritatis officiis, culpa similique!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore repellat voluptatem nisi quis ad pariatur, eius labore repellendus nulla non. Eaque eum ipsam accusantium totam aliquid illum vitae tenetur, vero culpa iste. Debitis consequatur, rem maxime nobis illum recusandae, repellendus!
+          </p>
+        </section>
+        
+        <footer class="content_block_bottom clearfix">
+          
+          <ul class="block_bottom_items">
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+          </ul>
+          <b class="block_bottom_author">Author: John Doe</b>
+          <time pubdate datetime="2017-24-01">24 januar 2017 year</time>
+
+        </footer>
+
+      </article>      
+
+
+    </section>
+
+    <aside class="main_sidebar"> <!--  -->
+      
+      <form action=""></form> <!-- Темп. Тут форма с полями, после список какойто -->
+
+    </aside>
+
+  </main>  
 
 </body>
 </html>

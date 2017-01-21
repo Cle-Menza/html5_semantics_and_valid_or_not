@@ -1,2 +1,177 @@
+/* #eb5201 #fe7e18 #38550f */
+/* общие стили */
 body {
+  background-color: #ffffff;
+  
+  font-family: "Rubik"; /* Общие стили для всего текста на странице*/
+  font-size: 16px;
+  font-weight: 500; 
+  line-height: 1.4;
+  color: #000000;
+}
+.clearfix::after { /* Распорка из-за флоатов */
+  content: "";
+  display: table; 
+  clear: both;
+}
+.content_container { /* Контейнер для контента */
+  margin: 10px auto;
+  padding: 0 10px; 
+  width: 960px;
+  border: 2px solid #eb5201;
+}
+/* Локальные стили */
+/* Стили шапки */
+.top_nav_page {
+  border: 2px solid #fe7e18;
+}
+.main_menu {
+  float: left;
+  
+  max-width: 640px;
+  
+  list-style: none;
+  margin: 10px;
+  padding: 0;
+  
+  font-size: 0; /* Следующим идет inline-block. Так уберутся пробелы */
+}
+.main_menu .menu_item {
+  display: inline-block;
+  vertical-align: top; /* Явно указано расположение inline block */
+}
+.menu_item .menu_link {
+  display: block; /* Из строчных в полноценные блоки */
+  padding: 22px 10px;
+  font-size: 16px;
+  color: #000000;
+  text-decoration: none;
+  border: 2px solid #38550f;
+}
+.menu_item .menu_link:hover {
+  background-color: #feb53d;
+}
+.menu_item:not(:last-child) .menu_link {
+  border-right: none;
+}
+.main_search {
+  border: 2px solid #38550f;
+  float: right;
+  max-width: 270px;
+  min-height: 50px;
+  margin: 10px;
+}
+.main_search .search_field {
+  margin: 10px;
+  padding: 10px;
+  max-width: 150px;
+  border: 2px solid #feb53d;
+  
+  font-family: "Rubik";
+  font-size: 16px;
+  font-weight: 500;  /* не наследует стили текста */
+  line-height: 1.4;
+  color: #000000;
+}
+.main_search .search_field:focus {
+  outline: none;
+}
+.main_search .search_btn {
+  margin: 10px;
+  margin-left: 0;
+  padding: 10px;
+  
+  font-family: "Rubik";
+  font-size: 16px;
+  font-weight: 500;  /* не наследует стили текста */
+  line-height: 1.4;
+  color: #000000;
+  
+  border: 2px solid #feb53d;
+  background: none;
+}
+.main_search .search_btn:active,
+.main_search .search_btn:focus {
+  outline: none;
+}
+/* Стили главного контента */
+.main_content {
+  border: 2px solid #38550f;
+  margin: 10px;
+  padding: 10px;
+  
+  width: 590px;
+  float: left;
+}
+.main_sidebar {
+  border: 2px solid #38550f;
+  margin: 10px;
+  padding: 10px;
+  
+  width: 278px;
+  float: right;
+}
+.content_title_main_title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+.content_title_best_posts {
+  margin: 0;
+}
+.best_post_link img {
+  width: 100px;
+  height: 65px;
+}
+.best_post_link:not(:nth-last-of-type(1)) {
+  margin-right: 18px;
+}
+.content_block {
+  border: 2px solid #38550f;
+  margin: 10px 0;
+  padding: 10px;
+}
+.block_title {
+  margin: 0;
+}
+.content_block_table {
+  border: 1px solid #000000;
+  width: 100%;
+  border-collapse: collapse;
+}
+.content_block_table td,
+.content_block_table th {
+  border: 1px solid #000000;
+  padding: 5px;
+}
+.content_block_table tr td:not(:first-child) {
+  text-align: center;
+}
+.block_bottom_items {
+  font-size: 0;
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+  float: left;
+}
+.content_block_bottom time {
+  float: right;
+  margin-top: 10px;
+}
+.block_bottom_author {
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.block_bottom_item {
+  display: inline-block;
+  vertical-align: top;
+}
+.block_bottom_link {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: #f2f2f2 url("sample.png") no-repeat;
+}
+.block_bottom_item:not(:last-child) {
+  margin-right: 5px;
 }
