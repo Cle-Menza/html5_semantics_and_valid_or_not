@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Rubik:300,500,700&amp;subset=cyrillic" rel="stylesheet">
-  <title>Document</title>
+  <title>HTML5 semantics and valid or not</title>
 </head>
 <body class="main_page"> <!--  -->
-  
-  <header class="top_nav_page"> <!-- Топ линия всей шапки страницы -->
-    
-    <nav class="content_container clearfix"> <!-- Контейнер для выравнивания. Фикс из-за флоатов -->
-      
+  <!-- Топ линия всей шапки страницы -->
+  <header class="top_nav_page"> 
+    <!-- Контейнер для выравнивания. Фикс из-за флоатов -->
+    <nav class="content_container clearfix"> 
       <ul class="main_menu"> <!-- ul сам по себе блочный элемент -->
         <li class="menu_item"><a class="menu_link" href="">Menu</a></li>
         <li class="menu_item"><a class="menu_link" href="">Menu Link</a></li>
@@ -21,25 +20,24 @@
         <li class="menu_item"><a class="menu_link" href="">Menu Link</a></li>
         <li class="menu_item"><a class="menu_link" href="">Menu Link</a></li>
       </ul>
-
-      <form class="main_search" action=""> <!-- form блочный элемент -->
-        <input class="search_field" type="search" name="search" placeholder="search" autofocus>
+      <!-- form блочный элемент -->
+      <form class="main_search" action="#" method="get"> 
+        <input class="search_field" type="search" name="search" placeholder="search" autofocus required>
         <button class="search_btn">Search</button>
       </form>
-
     </nav>
-
   </header>
-
-  <main class="content_container clearfix"> <!-- Весь содержательный и главный контент страницы -->
-    
-    <section class="main_content"> <!-- Секция блоков и материалов -->
-      
-      <header class="content_title"> <!-- Заголовок страницы -->
+  <!-- Весь содержательный и главный контент страницы -->
+  <main class="content_container clearfix"> 
+    <!-- Секция блоков и материалов -->
+    <section class="main_content"> 
+      <!-- Заголовок страницы -->
+      <header class="content_title"> 
         <h1 class="content_title_main_title">
         Main content title
         </h1>
-        <figure class="content_title_best_posts"> <!-- Групировка картинок -->
+        <!-- Групировка картинок -->
+        <figure class="content_title_best_posts"> 
           <a href="" class="best_post_link"><img width="100" height="65" src="sample.png" 
           alt="Sample Img"></a>
           <a href="" class="best_post_link"><img width="100" height="65" src="sample.png" 
@@ -50,19 +48,72 @@
           alt="Sample Img"></a>
           <a href="" class="best_post_link"><img width="100" height="65" src="sample.png" 
           alt="Sample Img"></a>
-          <figcaption class="best_post_caption"> <!-- Подпись к групе картинок -->
+          <!-- Подпись к групе картинок -->
+          <figcaption class="best_post_caption"> 
             Best posts in the rubric
           </figcaption>
         </figure>
       </header>
-
-      <article class="content_block"> <!-- Отдельный пост -->
-          
-        <header class="content_block_title"> <!-- Заголовок поста -->
-          <h3 class="block_title">Block Title 1</h3>
-          <time pubdate datetime="2017-20-01">20 januar 2017 year</time>
+      <!-- Отдельный пост -->
+      <article class="content_block"> 
+        <!-- Заголовок поста -->  
+        <header class="content_block_title"> 
+          <h3 class="block_title">Block Title 0</h3>
+          <time datetime="2017-01-19">19 januar 2017 year</time>
         </header>
-
+        <!-- Основной контент поста -->
+        <section class="content_block_inside">
+          <p>
+            <code>
+              <p>
+                <b>Warning:</b> Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.
+              From line 65, column 9; to line 65, column 46
+              &gt;↩        &lt;section class="content_block_inside"&gt;↩
+              </p>   
+              <p>
+                <b>Warning:</b> Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.
+              From line 114, column 9; to line 114, column 46
+              &gt;↩        &lt;section class="content_block_inside"&gt;↩
+              </p>  
+              <p>
+                <b>Warning:</b> Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.
+              From line 144, column 9; to line 144, column 46
+              &gt;↩        &lt;section class="content_block_inside"&gt;↩ 
+              </p>
+              <p>
+                <b>Warning:</b> The date input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.
+              From line 193, column 11; to line 193, column 54
+              &lt;input type="date" name="date" tabindex="5"&gt;↩
+              </p>
+              <p>
+                <b>Warning:</b> Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.
+              From line 221, column 5; to line 221, column 48
+              е --&gt;↩    &lt;section class="content_container clearfix"&gt;↩
+              </p>
+            </code>
+          </p>
+        </section>
+        <!-- Подвал поста с соц. кнопками и автором -->
+        <footer class="content_block_bottom clearfix">
+          <ul class="block_bottom_items">
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+            <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
+          </ul>
+          <b class="block_bottom_author">Author: John Doe</b>
+          <time datetime="2017-01-20">20 januar 2017 year</time>
+        </footer>
+      </article>
+      <!-- Отдельный пост -->
+      <article class="content_block"> 
+        <!-- Заголовок поста -->  
+        <header class="content_block_title"> 
+          <h3 class="block_title">Block Title 1</h3>
+          <time datetime="2017-01-20">20 januar 2017 year</time>
+        </header>
+        <!-- Основной контент поста -->
         <section class="content_block_inside">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat tenetur sunt velit, ab ut nemo eum similique, veniam fugit aperiam assumenda reprehenderit, rerum unde asperiores? Sunt voluptates natus dolore illum perspiciatis maiores, minima iste, animi, asperiores autem obcaecati optio quasi ea et rem doloribus quaerat pariatur. Aut, quaerat neque nam.
@@ -91,9 +142,8 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente explicabo sed dolore eum provident, mollitia.
           </p>
         </section>
-        
+        <!-- Подвал поста с соц. кнопками и автором -->
         <footer class="content_block_bottom clearfix">
-          
           <ul class="block_bottom_items">
             <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
             <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
@@ -102,31 +152,28 @@
             <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
           </ul>
           <b class="block_bottom_author">Author: John Doe</b>
-          <time pubdate datetime="2017-20-01">20 januar 2017 year</time>
-
+          <time datetime="2017-01-20">20 januar 2017 year</time>
         </footer>
-
       </article>
-
-      <article class="content_block"> <!-- Отдельный пост -->
-          
-        <header class="content_block_title"> <!-- Заголовок поста -->
+      <!-- Отдельный пост -->
+      <article class="content_block"> 
+        <!-- Заголовок поста -->  
+        <header class="content_block_title"> 
           <h3 class="block_title">Block Title 2</h3>
-          <time pubdate datetime="2017-22-01">22 januar 2017 year</time>
+          <time datetime="2017-01-22">22 januar 2017 year</time>
         </header>
-
+        <!-- Основной контент поста -->
         <section class="content_block_inside">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat tenetur sunt velit, ab ut nemo eum similique, veniam fugit aperiam assumenda reprehenderit, rerum unde asperiores?
           </p>
-          <img width="100%" src="sample.png" alt="sample img">
+          <img src="sample.png" alt="sample img">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure unde ipsa vel similique sint ratione placeat iste impedit fugiat quasi laborum dolor magni, quae neque doloribus iusto nostrum reiciendis magnam cupiditate atque, eligendi, provident consequatur eaque deleniti. Consequuntur odit accusamus rerum, molestias perferendis sint labore deserunt facilis eum obcaecati. At velit saepe quaerat quibusdam atque. Dolores veritatis officiis, culpa similique!
           </p>
         </section>
-        
+        <!-- Подвал поста с соц. кнопками и автором -->
         <footer class="content_block_bottom clearfix">
-          
           <ul class="block_bottom_items">
             <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
             <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
@@ -135,19 +182,17 @@
             <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
           </ul>
           <b class="block_bottom_author">Author: John Doe</b>
-          <time pubdate datetime="2017-22-01">22 januar 2017 year</time>
-
+          <time datetime="2017-01-22">22 januar 2017 year</time>
         </footer>
-
       </article>
-
-      <article class="content_block"> <!-- Отдельный пост -->
-          
-        <header class="content_block_title"> <!-- Заголовок поста -->
+      <!-- Отдельный пост -->
+      <article class="content_block"> 
+        <!-- Заголовок поста -->  
+        <header class="content_block_title"> 
           <h3 class="block_title">Block Title 3</h3>
-          <time pubdate datetime="2017-24-01">24 januar 2017 year</time>
+          <time datetime="2017-01-24">24 januar 2017 year</time>
         </header>
-
+        <!-- Основной контент поста -->
         <section class="content_block_inside">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat tenetur sunt velit, ab ut nemo eum similique, veniam fugit aperiam assumenda reprehenderit, rerum unde asperiores?
@@ -159,9 +204,8 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore repellat voluptatem nisi quis ad pariatur, eius labore repellendus nulla non. Eaque eum ipsam accusantium totam aliquid illum vitae tenetur, vero culpa iste. Debitis consequatur, rem maxime nobis illum recusandae, repellendus!
           </p>
         </section>
-        
+        <!-- Подвал поста с соц. кнопками и автором -->
         <footer class="content_block_bottom clearfix">
-          
           <ul class="block_bottom_items">
             <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
             <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
@@ -170,22 +214,96 @@
             <li class="block_bottom_item"><a class="block_bottom_link" href="">Socials Link</a></li>
           </ul>
           <b class="block_bottom_author">Author: John Doe</b>
-          <time pubdate datetime="2017-24-01">24 januar 2017 year</time>
-
+          <time datetime="2017-01-24">24 januar 2017 year</time>
         </footer>
-
       </article>      
-
-
     </section>
-
-    <aside class="main_sidebar"> <!--  -->
-      
-      <form action=""></form> <!-- Темп. Тут форма с полями, после список какойто -->
-
+    <!-- Сайдбар страницы -->
+    <aside class="main_sidebar">
+      <!-- Заголовок к секции -->
+      <h3>Navigation Title</h3>
+      <!-- Меню рубрик -->
+      <ul class="sidebar_navigation">
+        <li class="snavigation_item"><a class="snavigation_link" href="">Sidebar Navigation Link</a></li>
+        <li class="snavigation_item"><a class="snavigation_link" href="">Sidebar Navigation Link</a></li>
+        <li class="snavigation_item"><a class="snavigation_link" href="">Sidebar Navigation Link</a></li>
+        <li class="snavigation_item"><a class="snavigation_link" href="">Sidebar Navigation Link</a></li>
+        <li class="snavigation_item"><a class="snavigation_link" href="">Sidebar Navigation Link</a></li>
+        <li class="snavigation_item"><a class="snavigation_link" href="">Sidebar Navigation Link</a></li>
+        <li class="snavigation_item"><a class="snavigation_link" href="">Sidebar Navigation Link</a></li>
+        <li class="snavigation_item"><a class="snavigation_link" href="">Sidebar Navigation Link</a></li>
+      </ul>
+      <!-- Заголовок секции -->
+      <h3>Sidebar Form</h3>
+      <form action="#" class="sidebar_form" method="post">
+        <fieldset>
+          <legend>Personal Info</legend>
+          <input type="text" name="name" placeholder="Your Name" required tabindex="1">
+          <input type="email" name="email" placeholder="Your Email" required tabindex="2">
+          <input type="tel" name="tel" placeholder="Your Phone" required tabindex="3">
+          <input type="url" name="url" placeholder="Your Site" required tabindex="4">
+          <input type="date" name="date" tabindex="5">
+        </fieldset>
+        <fieldset>
+          <legend>Your Choise ?</legend>
+            <label class="sidebar_form_radio">
+            <input type="radio" name="choise" value="Black" required tabindex="6"> Black
+            </label>
+            <label class="sidebar_form_radio">
+            <input type="radio" name="choise" value="White" required> White
+            </label>
+            <label class="sidebar_form_radio">
+            <input type="radio" name="choise" value="Red" required> Red
+            </label>
+            <label class="sidebar_form_radio">
+            <input type="radio" name="choise" value="Blue" required> Blue
+            </label>
+            <label class="sidebar_form_radio">
+            <input type="radio" name="choise" value="Green" required> Green
+            </label>
+        </fieldset>
+        <button class="btn" type="submit" tabindex="7">Send</button>
+        <button class="btn" type="reset" tabindex="8">Reset</button>
+      </form>
     </aside>
-
-  </main>  
-
+  </main>
+  <!-- Подвал страницы -->
+  <footer class="bottom_page">
+    <!-- Контейнер для центрования на странице -->
+    <section class="content_container clearfix">
+      <!-- Второстепенное меню страницы -->
+      <!-- Ul блочный элемент -->    
+      <ul class="bottom_page_list">
+        <li class="bottom_page_item"><a class="bottom_page_link" href="">Menu</a></li>
+        <li class="bottom_page_item"><a class="bottom_page_link" href="">Menu Link</a></li>
+        <li class="bottom_page_item"><a class="bottom_page_link" href="">Menu Link</a></li>
+      </ul>
+      <!-- Ul блочный элемент -->  
+      <ul class="bottom_page_list">
+        <li class="bottom_page_item"><a class="bottom_page_link" href="">Menu Link Link</a></li>
+        <li class="bottom_page_item"><a class="bottom_page_link" href="">Menu Link</a></li>
+        <li class="bottom_page_item"><a class="bottom_page_link" href="">Menu Link</a></li>
+      </ul>
+      <!-- Ul блочный элемент -->  
+      <ul class="bottom_page_list">
+        <li class="bottom_page_item"><a class="bottom_page_link" href="">Sidebar link duplicate</a></li>
+        <li class="bottom_page_item"><a class="bottom_page_link" href="">Sidebar link duplicate</a></li>
+        <li class="bottom_page_item"><a class="bottom_page_link" href="">Sidebar link duplicate</a></li>
+        <li class="bottom_page_item"><a class="bottom_page_link" href="">Sidebar link duplicate</a></li>
+      </ul>
+      <!-- Ul блочный элемент -->  
+      <ul class="bottom_page_list">
+        <li class="bottom_page_item"><a class="bottom_page_link" href="">Sidebar link duplicate</a></li>
+        <li class="bottom_page_item"><a class="bottom_page_link" href="">Sidebar link duplicate</a></li>
+        <li class="bottom_page_item"><a class="bottom_page_link" href="">Sidebar link duplicate</a></li>
+        <li class="bottom_page_item"><a class="bottom_page_link" href="">Sidebar link duplicate</a></li>
+      </ul>
+      <!-- Клик на картинку открывает карту -->
+      <figure class="bottom_page_maps">
+        <img width="133" height="80" src="sample.png" alt="Sample img">
+        <figcaption>Made with Love</figcaption>
+      </figure>
+    </section>
+  </footer>
 </body>
 </html>

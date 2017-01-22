@@ -9,6 +9,16 @@ body {
   line-height: 1.4;
   color: #000000;
 }
+.btn {
+  font-family: "Rubik"; /* Общие стили для всего текста на странице*/
+  font-size: 16px;
+  font-weight: 500; 
+  line-height: 1.4;
+  color: #000000;
+  border: 1px solid #000000;
+  background: none;
+  padding: 5px;
+}
 .clearfix::after { /* Распорка из-за флоатов */
   content: "";
   display: table; 
@@ -146,6 +156,9 @@ body {
 .content_block_table tr td:not(:first-child) {
   text-align: center;
 }
+.content_block_inside img {
+  width: 100%;
+}
 .block_bottom_items {
   font-size: 0;
   list-style: none;
@@ -175,3 +188,105 @@ body {
 .block_bottom_item:not(:last-child) {
   margin-right: 5px;
 }
+.main_sidebar h3 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.sidebar_navigation {
+  margin: 0;
+  margin-left: 20px;
+  padding: 0;
+  list-style: square;
+}
+.snavigation_item {
+  margin-bottom: 5px;
+}
+.snavigation_item:last-child {
+  margin-bottom: 15px;
+}
+.snavigation_link {
+  text-decoration: none;
+  color: #000000;
+}
+.snavigation_link:hover {
+  border-bottom: 2px solid #000000;
+}
+.snavigation_link:hover::after {
+  content: " >>";
+}
+.sidebar_form input:not([type="radio"]) {
+  width: 100%;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  
+  font-family: "Rubik"; /* Общие стили для всего текста на странице*/
+  font-size: 16px;
+  font-weight: 500; 
+  line-height: 1.4;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.sidebar_form input[type="date"] {
+  margin-bottom: 0;
+}
+.sidebar_form_radio {
+  display: block;
+}
+.sidebar_form_radio input[type="radio"] {
+  margin: 10px;
+}
+.sidebar_form button[type="submit"],
+.sidebar_form button[type="reset"] {
+  width: 137px;
+  margin-top: 10px;
+}
+.sidebar_form button[type="submit"]:hover {
+  background-color: rgba(0, 150, 0, 0.3);
+}
+.sidebar_form button[type="reset"]:hover {
+  background-color: rgba(150, 0, 0, 0.3);
+}
+.bottom_page {
+  border: 2px solid #fe7e18;
+}
+.bottom_page_list {
+  float: left;
+  list-style: none;
+  margin: 10px 20px 0 0;
+  padding: 0;
+}
+.bottom_page_link {
+  text-decoration: none;
+  color: #000000;
+  display: block;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  position: relative;
+}
+.bottom_page_link:hover::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  border: 1px solid #000000;
+}
+.bottom_page_maps {
+  float: right;
+  margin: 10px 0;
+  position: relative;
+}
+.bottom_page_maps img {
+  width: 133px;
+  height: 80px;
+}
+.bottom_page_maps figcaption {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
